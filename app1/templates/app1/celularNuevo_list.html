@@ -5,7 +5,7 @@
 <body>
     <div class="card">
         <div class="card-body">
-            <h1>Celulares Nuevo:</h1>
+            <h1>Celulares Nuevos:</h1>
             <h5>Venta directa del provedor.</h5>
 
         </div>
@@ -34,6 +34,7 @@
         </div>
                       
        {% endfor%}
-       
+       {% if request.user.is_superuser%}
        <a href="{% url "nuevoCrear" %}" class="btn btn-success">Agrega Publicacion</a>
+       {% endif %}
  {% endblock contenidoQueCambia %}
