@@ -1,0 +1,16 @@
+{% extends "app_g/padre.html" %}
+
+{% block title %}  Celulares Usados{% endblock title %}
+
+{% block contenidoQueCambia %}
+
+<body>
+    <h1>Celular Formulario:</h1>
+    <h4>Ingrese informacion referia al vendedor y al producto.</h4>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Cargar</button>
+    </form>
+</body>
+{% endblock %} 

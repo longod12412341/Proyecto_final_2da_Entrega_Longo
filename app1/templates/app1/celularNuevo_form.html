@@ -1,0 +1,13 @@
+{% extends "app_g/padre.html" %}
+
+{% block contenidoQueCambia %}
+
+<body>
+    <h1>Celular Formulario</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Publicar</button>
+    </form>
+</body>
+{% endblock %} 
